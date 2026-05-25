@@ -1,5 +1,5 @@
 <header class="w-full bg-white shadow-sm">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
+    <nav class="flex items-baseline justify-between px-6 md:px-12 lg:px-20 py-6">
         <a href="{{ route('home') }}" class="font-fredoka text-3xl text-black md:text-4xl">
             Neura B.
         </a>
