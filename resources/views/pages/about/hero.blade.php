@@ -1,23 +1,45 @@
-<section class="w-full flex flex-col-reverse md:flex-row items-center px-6 md:px-12 lg:px-20 py-10 lg:py-16 gap-8 md:gap-0">
+<section class="w-full relative bg-white">
 
-    {{-- Kiri: Teks --}}
-    <div class="w-full md:w-1/2 relative">
-        <img src="{{ asset('img/about/fireworks.png') }}" class="absolute left-0 -bottom-24 w-32 z-30" alt="">
-        <img src="{{ asset('img/about/balloon.png') }}" class="w-32 mb-6 mt-12" alt="">
-        <h1 class="text-sky-400 text-5xl md:text-6xl lg:text-[80px] font-bold mb-4 leading-tight"
-            style="font-family: var(--font-fredoka)">
-            Tentang
-        </h1>
-        <p class="text-gray-800 text-base md:text-lg leading-relaxed max-w-md"
-           style="font-family: var(--font-poppins)">
-            Di Neura Bloom, kami membantu anak autisme menggali potensi mereka melalui metode belajar
-            visual dan ramah sensorik yang unik.
-        </p>
+    {{-- Inner wrapper overflow-hidden untuk dekorasi atas agar tidak keluar section --}}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        {{-- Awan di belakang balon --}}
+        <img src="{{ asset('img/about/awan.png') }}"
+             alt=""
+             class="absolute -top-33.75 -left-27.5 w-90 z-0">
+
+        {{-- Balon dekorasi kiri atas --}}
+        <img src="{{ asset('img/about/balon.png') }}"
+             alt=""
+             class="absolute top-4 left-6 md:left-10 w-30 z-10">
+
+        {{-- Fireworks dekorasi kiri bawah --}}
+        <img src="{{ asset('img/about/fireworks.png') }}"
+             alt=""
+             class="absolute bottom-4 left-4 md:left-8 w-20 md:w-24 lg:w-32 z-10">
     </div>
 
-    {{-- Kanan: Gambar --}}
-    <div class="w-full md:w-1/2 flex justify-center items-center">
-        <img src="{{ asset('img/about/pencil.png') }}" alt="Anak-anak" class="w-full object-contain">
+    <div class="flex flex-col md:flex-row items-center">
+
+        {{-- Kiri: Teks (vertically centered) --}}
+        <div class="w-full md:w-2/5 py-16 md:py-0 text-left z-10 px-6 md:pl-12 lg:pl-20">
+            <h1 class="text-sky-400 text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-bold leading-tight mb-4"
+                style="font-family: var(--font-fredoka)">
+                Tentang
+            </h1>
+            <p class="text-gray-800 text-sm sm:text-base md:text-[22px] leading-relaxed max-w-250 ml-5"
+               style="font-family: var(--font-poppins)">
+                Di Neura Bloom, kami membantu anak autisme menggali potensi mereka
+                melalui metode belajar visual dan ramah sensorik yang unik.
+            </p>
+        </div>
+
+        {{-- Kanan: Gambar --}}
+        <div class="w-full md:w-3/5 flex justify-end items-end">
+            <img src="{{ asset('img/about/about.png') }}"
+                 alt="Anak-anak di atas pensil"
+                 class="w-225 object-contain">
+        </div>
+
     </div>
 
 </section>
