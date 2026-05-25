@@ -13,16 +13,9 @@
             </li>
 
             <li>
-                <a href="#"
-                   class="font-freeman text-2xl font-bold uppercase tracking-wider text-[#27AEEF] hover:opacity-80 {{ request()->routeIs('tentang') ? 'underline underline-offset-8' : '' }}">
+                <a href="{{ route('about') }}"
+                   class="font-freeman text-2xl font-bold uppercase tracking-wider text-[#27AEEF] hover:opacity-80 {{ request()->routeIs('about') ? 'underline underline-offset-8' : '' }}">
                     Tentang
-                </a>
-            </li>
-
-            <li>
-                <a href="#"
-                   class="font-freeman text-2xl font-bold uppercase tracking-wider text-[#27AEEF] hover:opacity-80 {{ request()->routeIs('contact') ? 'underline underline-offset-8' : '' }}">
-                    Contact
                 </a>
             </li>
 
