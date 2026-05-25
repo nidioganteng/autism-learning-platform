@@ -21,7 +21,7 @@
 
     {{-- Kanan: Gambar (hidden di mobile) --}}
     <div class="hidden md:flex w-full md:w-1/2 justify-center items-center">
-        <img src="{{ asset('img/homepage/anak-1.png') }}"
+        <img src="{{ asset('img/homepage/home.png') }}"
              alt="Neura Bloom"
              class="w-4/5 lg:w-full object-contain">
     </div>
