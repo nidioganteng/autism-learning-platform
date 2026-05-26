@@ -1,7 +1,8 @@
 <?php
 
-// Vercel's filesystem is read-only except /tmp
-// Create writable storage directories there
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
+
 $tmpStorage = '/tmp/storage';
 
 foreach ([
@@ -20,4 +21,11 @@ putenv("APP_STORAGE_PATH=$tmpStorage");
 $_ENV['APP_STORAGE_PATH'] = $tmpStorage;
 $_SERVER['APP_STORAGE_PATH'] = $tmpStorage;
 
-require __DIR__ . '/../public/index.php';
+define('LARAVEL_START', microtime(true));
+
+require __DIR__ . '/../vendor/autoload.php';
+
+/** @var Application $app */
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+
+$app->handleRequest(Request::capture());
