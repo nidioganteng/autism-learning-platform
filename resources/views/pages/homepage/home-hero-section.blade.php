@@ -1,4 +1,4 @@
-<section class="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 py-8 md:py-10 lg:py-14 gap-8 md:gap-0 min-h-screen md:min-h-[80vh]">
+<section class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 py-8 md:py-10 lg:py-14 gap-4 md:gap-0 md:min-h-[80vh]">
 
     {{-- Kiri: Teks --}}
     <div class="w-full md:w-1/2 md:pr-10 text-center md:text-left">
@@ -19,11 +19,11 @@
         </a>
     </div>
 
-    {{-- Kanan: Gambar (hidden di mobile) --}}
-    <div class="hidden md:flex w-full md:w-1/2 justify-center items-center">
+    {{-- Kanan: Gambar --}}
+    <div class="w-full md:w-1/2 flex justify-center items-center">
         <img src="{{ asset('img/homepage/home.png') }}"
              alt="Neura Bloom"
-             class="w-4/5 lg:w-full object-contain">
+             class="w-3/4 sm:w-2/3 md:w-4/5 lg:w-full object-contain">
     </div>
 
 </section>

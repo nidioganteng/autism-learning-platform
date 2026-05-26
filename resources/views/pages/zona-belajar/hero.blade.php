@@ -1,4 +1,4 @@
-<section class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 py-6 md:py-10 lg:py-14 gap-8 md:gap-0 min-h-[80vh]">
+<section class="w-full flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 py-6 md:py-10 lg:py-14 gap-4 md:gap-0 md:min-h-[80vh]">
 
     {{-- Kiri: Teks --}}
     <div class="w-full md:w-1/2 md:pr-10 text-center md:text-left flex flex-col justify-center">
