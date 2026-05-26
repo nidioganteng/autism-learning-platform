@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build && mkdir -p dist && cp -r public/build dist/ && cp -r public/img dist/ && cp public/favicon.ico dist/ 2>/dev/null || true",
+  "buildCommand": "npm run build && mkdir -p dist && cp -r public/build dist/ && cp -r public/img dist/ && cp public/favicon.ico dist/ 2>/dev/null; mkdir -p public/build && cp dist/build/manifest.json public/build/manifest.json",
   "outputDirectory": "dist",
   "build": {
     "env": {
