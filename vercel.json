@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build && mkdir -p dist && cp -r public/build dist/ && cp -r public/img dist/ && cp public/favicon.ico dist/ 2>/dev/null; mkdir -p public/build && cp dist/build/manifest.json public/build/manifest.json",
-  "outputDirectory": "dist",
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
   "build": {
     "env": {
       "COMPOSER_NO_DEV": "1"
@@ -14,6 +14,7 @@
     }
   },
   "routes": [
+    { "src": "/index.php", "dest": "/api/index.php" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ]

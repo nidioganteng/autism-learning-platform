@@ -3,5 +3,3 @@ tests
 storage
 .env
 .git
-public/img
-public/build
