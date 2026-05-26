@@ -3,3 +3,4 @@ tests
 storage
 .env
 .git
+public/index.php
