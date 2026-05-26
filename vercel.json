@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "buildCommand": "npm run build && mkdir -p dist && cp -r public/build dist/ && cp -r public/img dist/ && cp public/favicon.ico dist/ 2>/dev/null || true",
+  "outputDirectory": "dist",
   "build": {
     "env": {
       "COMPOSER_NO_DEV": "1"
