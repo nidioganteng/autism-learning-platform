@@ -1,10 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-use Illuminate\Http\Request;
-
 $tmpStorage = '/tmp/storage';
 
 foreach ([
@@ -23,19 +18,10 @@ putenv("APP_STORAGE_PATH=$tmpStorage");
 $_ENV['APP_STORAGE_PATH'] = $tmpStorage;
 $_SERVER['APP_STORAGE_PATH'] = $tmpStorage;
 
-echo "Step 1: Storage dirs created<br>";
+define('LARAVEL_START', microtime(true));
 
-try {
-    define('LARAVEL_START', microtime(true));
-    require __DIR__ . '/../vendor/autoload.php';
-    echo "Step 2: Autoload OK<br>";
+require __DIR__ . '/../vendor/autoload.php';
 
-    $app = require_once __DIR__ . '/../bootstrap/app.php';
-    echo "Step 3: App bootstrapped OK<br>";
+$app = require_once __DIR__ . '/../bootstrap/app.php';
 
-    $app->handleRequest(Request::capture());
-} catch (\Throwable $e) {
-    echo "<b>Error:</b> " . $e->getMessage() . "<br>";
-    echo "<b>File:</b> " . $e->getFile() . ":" . $e->getLine() . "<br>";
-    echo "<pre>" . $e->getTraceAsString() . "</pre>";
-}
+$app->handleRequest(Illuminate\Http\Request::capture());
