@@ -3,6 +3,8 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+use Illuminate\Http\Request;
+
 $tmpStorage = '/tmp/storage';
 
 foreach ([
@@ -31,7 +33,6 @@ try {
     $app = require_once __DIR__ . '/../bootstrap/app.php';
     echo "Step 3: App bootstrapped OK<br>";
 
-    use Illuminate\Http\Request;
     $app->handleRequest(Request::capture());
 } catch (\Throwable $e) {
     echo "<b>Error:</b> " . $e->getMessage() . "<br>";
