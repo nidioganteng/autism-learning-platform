@@ -24,4 +24,11 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-$app->handleRequest(Illuminate\Http\Request::capture());
+try {
+    $app->handleRequest(Illuminate\Http\Request::capture());
+} catch (\Throwable $e) {
+    http_response_code(500);
+    echo '<b>Error:</b> ' . htmlspecialchars($e->getMessage()) . '<br>';
+    echo '<b>File:</b> ' . $e->getFile() . ':' . $e->getLine() . '<br>';
+    echo '<pre>' . htmlspecialchars($e->getTraceAsString()) . '</pre>';
+}
