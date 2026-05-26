@@ -3,6 +3,11 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "public",
+  "build": {
+    "env": {
+      "COMPOSER_NO_DEV": "1"
+    }
+  },
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.7.4"
